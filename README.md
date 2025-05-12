@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+### Real-Time Collaborative Editor (Google Docs Clone)
+A full-stack, real-time collaborative document editing app that simulates core functionality of Google Docs. Multiple users can edit the same document simultaneously with live updates and version persistence across server connections.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Features
+Real-Time Multi-User Editing
 
-## Available Scripts
+All changes sync live across all connected clients.
 
-In the project directory, you can run:
+Built-in conflict resolution ensures smooth concurrent edits.
 
-### `npm start`
+## Persistent Document State
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Documents are autosaved and persist across user sessions and server restarts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Multi-Server Support
 
-### `npm test`
+Scalable architecture handles multiple users across distributed server instances.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Cursor & Text Indicators (optional enhancement)
 
-### `npm run build`
+See who is typing and where.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Document Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create, open, and edit documents with unique shareable URLs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
+Frontend
+React (with hooks and context)
 
-### `npm run eject`
+Socket.IO Client
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Quill.js or Slate.js for rich text editing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Backend
+Node.js + Express
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Socket.IO Server for WebSocket communication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+MongoDB / Redis for document storage and pub-sub coordination (optional: PostgreSQL, Firestore, etc.)
 
-## Learn More
+⚙️ Setup Instructions
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/google-docs-clone.git
+cd google-docs-clone
+2. Install Dependencies
+bash
+Copy
+Edit
+# For backend
+cd server
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# For frontend
+cd ../client
+npm install
+3. Run Development Servers
+bash
+Copy
+Edit
+# Start backend
+cd server
+npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start frontend
+cd ../client
+npm start
+The app will be available at: http://localhost:3000
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
