@@ -30,7 +30,7 @@ React (with hooks and context)
 
 Socket.IO Client
 
-Quill.js or Slate.js for rich text editing
+Quill.js for rich text editing
 
 Backend
 Node.js + Express
@@ -44,8 +44,8 @@ MongoDB / Redis for document storage and pub-sub coordination (optional: Postgre
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/google-docs-clone.git
-cd google-docs-clone
+git clone https://github.com/PMA92/editor.git
+cd editor
 2. Install Dependencies
 bash
 Copy
